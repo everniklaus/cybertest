@@ -30,7 +30,7 @@
       overflow: hidden;
     }
 
-    /* subtle grain */
+  
     body::before {
       content: "";
       position: fixed; inset: 0; pointer-events: none;
@@ -54,7 +54,7 @@
       position: relative;
     }
 
-    /* Left rail */
+   
     .rail { padding: 14px 10px; display: flex; flex-direction: column; gap: 14px; align-items: center; justify-content: space-between; }
     .rail .brand { width: 42px; height: 42px; border-radius: 14px; display: grid; place-items: center; background: rgba(255,255,255,.7); border:1px solid var(--stroke); box-shadow: inset 0 1px 0 rgba(255,255,255,.7); }
     .rail .icons { display: grid; gap: 12px; }
@@ -67,7 +67,7 @@
     }
     .rail button:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(15, 23, 42, .12), inset 0 1px 0 rgba(255,255,255,.7); }
 
-    /* Main canvas with top notch */
+   
     .canvas { padding: 18px; }
     .glass {
       height: 100%; border-radius: var(--radius-3xl); border: 1px solid var(--stroke); background: linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.5));
@@ -75,7 +75,7 @@
       position: relative; overflow: hidden;
     }
 
-    /* notch cutout */
+    
     .glass::before {
       content: ""; position: absolute; left: 50%; top: -28px; transform: translateX(-50%);
       width: 220px; height: 64px; background: transparent; border-bottom-left-radius: 28px; border-bottom-right-radius: 28px; box-shadow: 0 26px 0 0 var(--card), 0 27px 0 1px var(--stroke);
@@ -88,7 +88,7 @@
       box-shadow: inset 0 1px 0 rgba(255,255,255,.78);
     }
 
-    /* Bottom-left product card inside main column */
+   
     .product-dock { position: absolute; left: 24px; bottom: 24px; width: 360px; }
     .product-card {
       display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center;
@@ -113,14 +113,14 @@
 
     .bullet { position: absolute; right: 14px; top: 14px; width: 9px; height: 9px; border-radius: 999px; background: #e9edf7; border:1px solid var(--stroke); }
 
-    /* floating shadow under everything */
+    
     .drop-shadow {
       position: absolute; left: 50%; transform: translateX(-50%); right: 0; bottom: -40px; height: 60px; width: 85%;
       background: radial-gradient(60% 55% at 50% 50%, rgba(0,0,0,.18), rgba(0,0,0,0) 70%);
       filter: blur(12px); opacity: .35; z-index: -1;
     }
 
-    /* Responsivo */
+   
     @media (max-width: 1100px) {
       .stage { grid-template-columns: 72px 1fr 300px; }
       .product-dock { width: 320px; }
@@ -140,10 +140,10 @@
 </head>
 <body>
   <main class="stage">
-    <!-- Left Rail -->
+   
     <aside class="panel rail">
       <div class="brand" aria-label="logo">
-        <!-- simple G-like glyph -->
+        
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="12" cy="12" r="9.5" stroke="#9aa1ad" stroke-width="2" />
           <path d="M12 6v6l4 4" stroke="#9aa1ad" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -179,7 +179,7 @@
     <section class="panel canvas">
       <div class="glass">
         <div class="logo">Versak Team</div>
-        <!-- Coloque aqui seu conteúdo 3D/vídeo/imagem -->
+        
         <div style="position:absolute; inset: 24px; border-radius: 18px; border:1px dashed rgba(0,0,0,.06); display:grid; place-items:center; color:#9aa1ad; font-weight:700;">SEU CONTEÚDO AQUI</div>
 
         <div class="product-dock">
@@ -217,4 +217,5 @@
   </main>
 </body>
 </html>
+
 
